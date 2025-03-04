@@ -37,6 +37,7 @@ try {
   console.log("All Contacts After editing", addressBook.getAllContacts());
   console.log(addressBook.deleteContact("Prayagrao"));
   console.log("All Contacts After Deleting:", addressBook.getAllContacts());
+  console.log("Total Contacts:", addressBook.countContacts());
 } catch (error) {
   console.error("Error:", error.message);
 }
