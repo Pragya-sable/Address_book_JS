@@ -52,6 +52,9 @@ try {
 
   console.log("Contacts in India:");
   console.log(addressBook.searchByCityOrState("India"));
+
+  console.log("Viewing Persons by City or State:");
+  console.log(addressBook.viewPersonsByCityOrState());
 } catch (error) {
   console.error("Error:", error.message);
 }
