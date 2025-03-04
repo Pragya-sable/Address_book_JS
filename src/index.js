@@ -38,6 +38,17 @@ try {
   console.log(addressBook.deleteContact("Prayagrao"));
   console.log("All Contacts After Deleting:", addressBook.getAllContacts());
   console.log("Total Contacts:", addressBook.countContacts());
+  const duplicateContact = new Contact(
+    "Pragya",
+    "Sable",
+    "Bhopal",
+    "India",
+    "In",
+    "100001",
+    "9876543210",
+    "sablepragya@gmail.com"
+  );
+  console.log(addressBook.addContact(duplicateContact));
 } catch (error) {
   console.error("Error:", error.message);
 }

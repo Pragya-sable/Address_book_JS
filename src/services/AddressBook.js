@@ -6,15 +6,19 @@ class AddressBook {
   }
 
   addContact(contact) {
-    if (
-      this.contacts.some(
-        (c) => c.phone === contact.phone || c.email === contact.email
-      )
-    ) {
+    const isDuplicate =
+      this.contacts.filter(
+        (c) =>
+          c.firstName.toLowerCase() === contact.firstName.toLowerCase() &&
+          c.lastName.toLowerCase() === contact.lastName.toLowerCase()
+      ).length > 0;
+
+    if (isDuplicate) {
       throw new Error(
-        "Duplicate Contact! Phone number or Email already exists."
+        "Duplicate Contact! A person with the same name already exists."
       );
     }
+
     this.contacts.push(contact);
     return "Contact added successfully!";
   }
