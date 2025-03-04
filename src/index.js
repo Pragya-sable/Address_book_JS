@@ -49,6 +49,9 @@ try {
     "sablepragya@gmail.com"
   );
   console.log(addressBook.addContact(duplicateContact));
+
+  console.log("Contacts in India:");
+  console.log(addressBook.searchByCityOrState("India"));
 } catch (error) {
   console.error("Error:", error.message);
 }
