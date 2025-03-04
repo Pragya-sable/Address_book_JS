@@ -25,7 +25,15 @@ try {
     "prayagsable@gmail.com"
   );
   console.log(addressBook.addContact(contact2));
-  console.log("All Contacts", addressBook.getAllContacts());
+  console.log("All Contacts Before editing", addressBook.getAllContacts());
+  console.log(
+    addressBook.editContact("Prayagrao", {
+      address: "Betul",
+      city: "Multai",
+      phone: "9234567890",
+    })
+  );
+  console.log("All Contacts After editing", addressBook.getAllContacts());
 } catch (error) {
   console.error("Error:", error.message);
 }
