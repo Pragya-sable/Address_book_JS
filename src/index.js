@@ -14,8 +14,18 @@ try {
     "9876543210",
     "sablepragya@gmail.com"
   );
-  console.log(addressBook.addContact(contact1));
-  console.log(addressBook.getAllContacts());
+  const contact2 = new Contact(
+    "Prayagrao",
+    "Sable",
+    "Bhopal",
+    "India",
+    "In",
+    "1000000",
+    "9197979988",
+    "prayagsable@gmail.com"
+  );
+  console.log(addressBook.addContact(contact2));
+  console.log("All Contacts", addressBook.getAllContacts());
 } catch (error) {
   console.error("Error:", error.message);
 }
