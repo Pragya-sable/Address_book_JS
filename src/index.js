@@ -14,6 +14,7 @@ try {
     "9876543210",
     "sablepragya@gmail.com"
   );
+  console.log(addressBook.addContact(contact1));
   const contact2 = new Contact(
     "Prayagrao",
     "Sable",
@@ -34,6 +35,8 @@ try {
     })
   );
   console.log("All Contacts After editing", addressBook.getAllContacts());
+  console.log(addressBook.deleteContact("Prayagrao"));
+  console.log("All Contacts After Deleting:", addressBook.getAllContacts());
 } catch (error) {
   console.error("Error:", error.message);
 }
